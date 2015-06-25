@@ -1,0 +1,19 @@
+{
+    "name": "example-app",
+    "require": {
+        "cakephp/cakephp": ">=2.6.4,<3.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.37",
+        "cakephp/debug_kit" : ">=2.2.4,<3.0.0"
+    },
+    "config": {
+        "vendor-dir": "vendors/"
+    },
+    "extra": {
+        "installer-paths": {
+            "./plugins/{$name}/": ["type:cakephp-plugin"]
+        }
+    }
+}
+

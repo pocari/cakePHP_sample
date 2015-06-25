@@ -1,0 +1,25 @@
+# User specific & automatically generated files #
+#################################################
+cakeapp/plugins
+cakeapp/vendors
+cakeapp/app/tmp
+cakeapp/app/build
+cakeapp/app/dist
+cakeapp/app/tags
+*.mo
+cakeapp/composer.lock
+
+# IDE and editor specific files #
+#################################
+*.swp
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
