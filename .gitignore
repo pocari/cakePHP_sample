@@ -7,7 +7,6 @@ cakeapp/app/build
 cakeapp/app/dist
 cakeapp/app/tags
 *.mo
-cakeapp/composer.lock
 
 # IDE and editor specific files #
 #################################
