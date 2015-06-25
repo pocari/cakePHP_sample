@@ -2,7 +2,7 @@
 
 ### 外部ライブラリ取得〜ビルトインサーバーで実行まで
 ```
-$ composer update
+$ composer install
 $ cd app/webroot
 $ php -S localhost:8080
 ```
