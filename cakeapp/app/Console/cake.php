@@ -26,14 +26,12 @@ if (function_exists('ini_set')) {
 	$root = dirname(dirname(dirname(__FILE__)));
 	$appDir = basename(dirname(dirname(__FILE__)));
 	$install = $root . DS . 'lib';
-	$composerInstall = $root . DS . $appDir . DS . 'Vendor' . DS . 'cakephp' . DS . 'cakephp' . DS . 'lib';
+	$composerInstall = $root . DS . 'vendors' . DS . 'cakephp' . DS . 'cakephp' . DS . 'lib';
 
 	// the following lines differ from its sibling
 	// /app/Console/cake.php
 	if (file_exists($composerInstall . DS . $dispatcher)) {
 		$install = $composerInstall;
-	} elseif (!file_exists($install . DS . $dispatcher)) {
-		$install = $root . PATH_SEPARATOR .  DS . 'Users' . DS . 'pocari' . DS . 'dev' . DS . 'tmp' . DS . '20150625-02' . DS . 'cakeapp' . DS . 'vendors' . DS . 'cakephp' . DS . 'cakephp' . DS . 'lib';
 	}
 
 	ini_set('include_path', $install . PATH_SEPARATOR . ini_get('include_path'));

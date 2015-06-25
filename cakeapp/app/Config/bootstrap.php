@@ -12,7 +12,6 @@
  * @package       app.Config
  * @since         CakePHP(tm) v 0.10.8.2117
  */
-
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
 
@@ -60,8 +59,20 @@ Cache::config('default', array('engine' => 'File'));
  * CakePlugin::load('DebugKit'); //Loads a single plugin named DebugKit
  *
  */
-CakePlugin::loadAll(); // Loads all plugins at once
+require_once ROOT . DS . 'vendors' . DS . 'autoload.php';
 
+spl_autoload_unregister(['App', 'load']);
+spl_autoload_register(['App', 'load'], true, true);
+
+// set plugin diredtory
+App::build([
+	'Plugin' => [
+		ROOT . DS . 'plugins/',
+	],
+]);
+
+CakePlugin::load("DebugKit");
+CakePlugin::loadAll(); // Loads all plugins at once
 /**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter . By default CakePHP bundles two filters:
  *

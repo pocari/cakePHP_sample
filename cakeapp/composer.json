@@ -1,11 +1,11 @@
 {
     "name": "example-app",
     "require": {
-        "cakephp/cakephp": "2.6.4"
+        "cakephp/cakephp": ">=2.6.4,<3.0.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "3.7.37",
-        "cakephp/debug_kit" : ">=2.2.4,<3.0.0"
+        "phpunit/phpunit": "3.7.38",
+        "cakephp/debug_kit" : "2.2.5"
     },
     "config": {
         "vendor-dir": "vendors/"

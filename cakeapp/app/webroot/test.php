@@ -50,13 +50,12 @@ if (!defined('APP_DIR')) {
  * The following line differs from its sibling
  * /app/webroot/test.php
  */
-//define('CAKE_CORE_INCLUDE_PATH',  DS . 'Users' . DS . 'pocari' . DS . 'dev' . DS . 'tmp' . DS . '20150625-02' . DS . 'cakeapp' . DS . 'vendors' . DS . 'cakephp' . DS . 'cakephp' . DS . 'lib');
 
 /**
  * This auto-detects CakePHP as a composer installed library.
  * You may remove this if you are not planning to use composer (not recommended, though).
  */
-$vendorPath = ROOT . DS . APP_DIR . DS . 'Vendor' . DS . 'cakephp' . DS . 'cakephp' . DS . 'lib';
+$vendorPath = ROOT . DS . 'vendors' . DS . 'cakephp' . DS . 'cakephp' . DS . 'lib';
 $dispatcher = 'Cake' . DS . 'Console' . DS . 'ShellDispatcher.php';
 if (!defined('CAKE_CORE_INCLUDE_PATH') && file_exists($vendorPath . DS . $dispatcher)) {
 	define('CAKE_CORE_INCLUDE_PATH', $vendorPath);
