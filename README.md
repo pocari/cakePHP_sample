@@ -2,6 +2,7 @@
 
 ### 外部ライブラリ取得〜ビルトインサーバーで実行まで
 ```
+$ cd cakeapp
 $ composer install
 $ cd app/webroot
 $ php -S localhost:8081 index.php
