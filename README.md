@@ -4,7 +4,7 @@
 ```
 $ composer install
 $ cd app/webroot
-$ php -S localhost:8080
+$ php -S localhost:8081 index.php
 ```
 
 ### ソースツリー
