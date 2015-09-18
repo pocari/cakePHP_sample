@@ -60,6 +60,7 @@ class DATABASE_CONFIG {
 		//'login' => 'user',
 		//'password' => 'password',
 		'database' => '../../../sample_data/db/sample.sqlite3',
+		//'database' => '/Users/pocari/dev/office/github.com/pocari/cakePHP_sample/sample_data/db/sample.sqlite3',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);
