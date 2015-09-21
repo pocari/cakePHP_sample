@@ -15,7 +15,7 @@ class HeadersController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator', 'Session', 'Search.Prg');
+	public $components = array('Paginator', 'Session', 'Search.Prg', 'RequestHandler');
     public $presetVars = true;
 
 /**
@@ -42,6 +42,24 @@ class HeadersController extends AppController {
 			]
 		];
 		$this->set('headers', $this->Paginator->paginate());
+	}
+	
+	private function to_json_response($object) {
+		$this->viewClass = 'Json';
+		$this->set('res', $object);
+		$this->set([
+			'_serialize' => ['res'],
+		]);
+	}
+
+	public function sample_ajax() {
+		Configure::write('debug', 0);
+
+		//throw new Exception('raise error from sample_ajax');
+		$val = $this->request->data['param01'] . ' server_time:' . (new DateTime())->format('Y-m-d H:i:s');
+		$this->to_json_response([
+			'res_param01' => $val
+		]);
 	}
 
 /**

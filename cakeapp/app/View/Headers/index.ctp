@@ -13,6 +13,30 @@ div.conditions h3 {
 </style>
 <?php $this->end(); ?>
 
+<?php $this->Html->scriptStart(array('inline' => false)); ?>
+$(document).ready( function() {
+    $("#button01").click(function(){
+		var url = '<?php echo $this->Html->url('/headers/sample_ajax', false); ?>';
+		var post_data = {
+			param01: 'param01_value'
+		};
+
+		$.ajax({
+			type: 'POST',
+			url: url,
+			data: post_data,
+		}).done(function(data) {
+			$('#output').text('return value is:' + data.res.res_param01);
+		}).fail(function (jqXHR) {
+			console.log(jqXHR);
+			console.log(jqXHR.statusText);
+		});
+    });
+
+
+});
+<?php $this->Html->scriptEnd(); ?>
+
 <div class="headers index">
 	<h2><?php echo __('Headers'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
@@ -70,4 +94,6 @@ div.conditions h3 {
 			<?php echo $this->Form->input('detail_name', array('label' => 'detail名称', 'class' => 'span12', 'empty' => true)); ?>
 		</fieldset>
 	<?php echo $this->Form->end('検索'); ?>
+	<input type="button" id="button01" value='click' />
+	<div id="output">initial value</div>
 </div>

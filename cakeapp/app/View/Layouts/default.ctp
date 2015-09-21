@@ -15,6 +15,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<?php echo $cakeDescription ?>:
 		<?php echo $this->fetch('title'); ?>
 	</title>
+	<script src="<?php echo $this->Html->url('/js/jquery-2.1.4.min.js'); ?>"></script>
 	<?php
 		echo $this->Html->meta('icon');
 
