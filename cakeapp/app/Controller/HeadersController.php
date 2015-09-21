@@ -9,12 +9,14 @@ App::uses('AppController', 'Controller');
  */
 class HeadersController extends AppController {
 
+	public $uses = ['Header', 'Detail'];
 /**
  * Components
  *
  * @var array
  */
-	public $components = array('Paginator', 'Session');
+	public $components = array('Paginator', 'Session', 'Search.Prg');
+    public $presetVars = true;
 
 /**
  * index method
@@ -22,9 +24,22 @@ class HeadersController extends AppController {
  * @return void
  */
 	public function index() {
+		
+		$this->Prg->commonProcess();
 		$this->Header->recursive = 0;
 		$this->Paginator->settings = [
-			'limit' => 2
+			'limit' => 2,
+			'fields' => ['Header.id', 'Header.name', 'Detail.name'],
+			'recursive' => 0,
+			'conditions' => $this->Header->parseCriteria($this->passedArgs),
+			'joins' => [
+				[
+					'type' => 'INNER',
+					'table' => '(select header_id, max(name) as name from details group by header_id)',
+					'alias' => 'Detail',
+					'conditions' => 'Detail.header_id = Header.id'
+				]
+			]
 		];
 		$this->set('headers', $this->Paginator->paginate());
 	}

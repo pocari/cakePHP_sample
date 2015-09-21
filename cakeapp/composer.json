@@ -1,7 +1,8 @@
 {
     "name": "example-app",
     "require": {
-        "cakephp/cakephp": ">=2.6.4,<3.0.0"
+        "cakephp/cakephp": ">=2.6.4,<3.0.0",
+        "cakedc/search": "2.5.1"
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.38",

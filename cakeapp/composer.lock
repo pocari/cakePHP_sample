@@ -4,8 +4,52 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3ddc5459277c1e410e761d677b8a2f42",
+    "hash": "efacc36a474e10152ee50e364284abc0",
     "packages": [
+        {
+            "name": "cakedc/search",
+            "version": "2.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CakeDC/search.git",
+                "reference": "67632a54d69e840970fa64c31eb79936c59e5226"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CakeDC/search/zipball/67632a54d69e840970fa64c31eb79936c59e5226",
+                "reference": "67632a54d69e840970fa64c31eb79936c59e5226",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "Search"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cake Development Corporation",
+                    "email": "team@cakedc.com",
+                    "homepage": "http://cakedc.com"
+                }
+            ],
+            "description": "Search Plugin for CakePHP",
+            "homepage": "http://github.com/CakeDC/search",
+            "keywords": [
+                "cakephp",
+                "filter",
+                "post-redirect-get",
+                "prg",
+                "search"
+            ],
+            "time": "2014-08-07 18:13:40"
+        },
         {
             "name": "cakephp/cakephp",
             "version": "2.6.7",
@@ -48,57 +92,6 @@
                 "framework"
             ],
             "time": "2015-05-28 23:30:33"
-        }
-    ],
-    "packages-dev": [
-        {
-            "name": "cakephp/debug_kit",
-            "version": "2.2.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cakephp/debug_kit.git",
-                "reference": "c91103061d9b7ec3141e642913f88090a292b2bf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/c91103061d9b7ec3141e642913f88090a292b2bf",
-                "reference": "c91103061d9b7ec3141e642913f88090a292b2bf",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "*",
-                "php": ">=5.3.0"
-            },
-            "type": "cakephp-plugin",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2.x-dev"
-                },
-                "installer-name": "DebugKit"
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Story",
-                    "homepage": "http://mark-story.com",
-                    "role": "Author"
-                },
-                {
-                    "name": "CakePHP Community",
-                    "homepage": "https://github.com/cakephp/debug_kit/graphs/contributors"
-                }
-            ],
-            "description": "CakePHP Debug Kit",
-            "homepage": "https://github.com/cakephp/debug_kit",
-            "keywords": [
-                "cakephp",
-                "debug",
-                "kit"
-            ],
-            "time": "2014-11-22 17:58:32"
         },
         {
             "name": "composer/installers",
@@ -194,6 +187,57 @@
                 "zikula"
             ],
             "time": "2015-02-18 17:17:01"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "cakephp/debug_kit",
+            "version": "2.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/debug_kit.git",
+                "reference": "c91103061d9b7ec3141e642913f88090a292b2bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/c91103061d9b7ec3141e642913f88090a292b2bf",
+                "reference": "c91103061d9b7ec3141e642913f88090a292b2bf",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                },
+                "installer-name": "DebugKit"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Story",
+                    "homepage": "http://mark-story.com",
+                    "role": "Author"
+                },
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/debug_kit/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP Debug Kit",
+            "homepage": "https://github.com/cakephp/debug_kit",
+            "keywords": [
+                "cakephp",
+                "debug",
+                "kit"
+            ],
+            "time": "2014-11-22 17:58:32"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -258,16 +302,16 @@
         },
         {
             "name": "phpunit/php-file-iterator",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-                "reference": "a923bb15680d0089e2316f7a4af8f437046e96bb"
+                "reference": "6150bf2c35d3fc379e50c7602b75caceaa39dbf0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/a923bb15680d0089e2316f7a4af8f437046e96bb",
-                "reference": "a923bb15680d0089e2316f7a4af8f437046e96bb",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/6150bf2c35d3fc379e50c7602b75caceaa39dbf0",
+                "reference": "6150bf2c35d3fc379e50c7602b75caceaa39dbf0",
                 "shasum": ""
             },
             "require": {
@@ -301,7 +345,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2015-04-02 05:19:05"
+            "time": "2015-06-21 13:08:43"
         },
         {
             "name": "phpunit/php-text-template",
@@ -346,16 +390,16 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "83fe1bdc5d47658b727595c14da140da92b3d66d"
+                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/83fe1bdc5d47658b727595c14da140da92b3d66d",
-                "reference": "83fe1bdc5d47658b727595c14da140da92b3d66d",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
+                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
                 "shasum": ""
             },
             "require": {
@@ -383,7 +427,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2015-06-13 07:35:30"
+            "time": "2015-06-21 08:01:12"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -559,16 +603,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.7.1",
+            "version": "v2.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "9808e75c609a14f6db02f70fccf4ca4aab53c160"
+                "reference": "2dc7b06c065df96cc686c66da2705e5e18aef661"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/9808e75c609a14f6db02f70fccf4ca4aab53c160",
-                "reference": "9808e75c609a14f6db02f70fccf4ca4aab53c160",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/2dc7b06c065df96cc686c66da2705e5e18aef661",
+                "reference": "2dc7b06c065df96cc686c66da2705e5e18aef661",
                 "shasum": ""
             },
             "require": {
@@ -604,7 +648,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-10 15:30:22"
+            "time": "2015-08-24 07:13:45"
         }
     ],
     "aliases": [],

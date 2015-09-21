@@ -7,6 +7,11 @@ App::uses('AppModel', 'Model');
  */
 class Header extends AppModel {
 
+	public $actsAs = ['Search.Searchable'];
+	public $filterArgs = [
+		'name' => ['type' => 'like'],
+		'detail_name' => ['type' => 'like', 'field' => 'Detail.name']
+	];
 /**
  * Display field
  *
