@@ -7,6 +7,9 @@ cakeapp/app/build
 cakeapp/app/dist
 cakeapp/app/tags
 *.mo
+GTAGS
+GRTAGS
+GPATH
 
 # IDE and editor specific files #
 #################################
